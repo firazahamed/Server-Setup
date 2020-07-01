@@ -1,0 +1,18 @@
+---
+- name: "Server Initial Setup"
+  hosts: gcloud
+  become: yes
+  tasks:
+    - name: "System Update"
+      include_tasks: system-update.yml
+
+    - name: "Essential packages"
+      include_tasks: essn-packages.yml
+
+    - name: "CSF Firewall Install"
+      include_tasks: csf-install.yml
+
+    - name: "Maldet Install"
+      include_tasks: maldet-install.yml
+        
+

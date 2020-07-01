@@ -1,0 +1,24 @@
+---
+    - name: 'YUM'
+      when: ansible_pkg_mgr == "yum" or ansible_pkg_mgr == "dnf"
+      yum:
+        name: 
+          - bind-utils
+          - perl
+          - wget 
+          - zip    
+          - sendmail  
+          - ipset  
+        state: present 
+
+    - name: 'APT'    
+      when: ansible_pkg_mgr == "apt"
+      apt:
+        name: 
+          - perl
+          - zip
+          - wget
+          - sendmail
+          - ipset
+          - host  
+        state: present
