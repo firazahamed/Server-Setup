@@ -1,4 +1,12 @@
 # Server-Setup
+**List of actions:**
+```
+"System Update"
+"Essential packages"
+"CSF Firewall Install"
+"Maldet Install"
+```
+
 **Upload files:**
 ```
 root@ansible-g:~/Server-Setup# ls
